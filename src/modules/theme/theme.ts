@@ -15,6 +15,16 @@ const headingVariants = [
 ] as const;
 
 const theme = createTheme({
+	components: {
+		MuiCssBaseline: {
+			styleOverrides: `
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			`,
+		},
+	},
 	typography: {
 		fontFamily: rubik.style.fontFamily,
 		// add the same font type to all heading variants
